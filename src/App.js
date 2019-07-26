@@ -32,8 +32,16 @@ function App() {
 
   return (
     <>
-      {barChartData && <BarChart data={barChartData} />}
-      {scatterPlotData && <ScatterPlot data={scatterPlotData} />}
+      <div
+        style={{ marginTop: "50px", marginLeft: "20%", position: "relative" }}
+      >
+        {barChartData && <BarChart data={barChartData} />}
+      </div>
+      <div
+        style={{ marginTop: "150px", marginLeft: "25%", position: "relative" }}
+      >
+        {scatterPlotData && <ScatterPlot data={scatterPlotData} />}
+      </div>
     </>
   );
 }

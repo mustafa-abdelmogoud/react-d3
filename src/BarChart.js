@@ -47,7 +47,7 @@ export default function BarChart({ data }) {
       {toolTip && (
         <div style={{ left: xScale(new Date(toolTip[0])) }} className="tooltip">
           <p>{toolTip[0]}</p>
-          <p>${toolTip[1]} Billion</p>
+          <p>${toolTip[1]}</p>
         </div>
       )}
       <svg width={width} height={height}>
