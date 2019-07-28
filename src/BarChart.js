@@ -40,12 +40,15 @@ export default function BarChart({ data }) {
     const yAxis = axisLeft(yScale);
     select(xAxisRef.current).call(xAxis);
     select(yAxisRef.current).call(yAxis);
-  }, []);
+  }, [xScale, yScale]);
 
   return (
     <>
       {toolTip && (
-        <div style={{ left: xScale(new Date(toolTip[0])) }} className="tooltip">
+        <div
+          style={{ left: xScale(new Date(toolTip[0])) }}
+          className="bar-tooltip"
+        >
           <p>{toolTip[0]}</p>
           <p>${toolTip[1]}</p>
         </div>
@@ -80,6 +83,7 @@ export default function BarChart({ data }) {
         <g ref={yAxisRef} transform={`translate(${marginLeft},${0})`} />
         {data.map(d => (
           <rect
+            className="bar"
             x={marginLeft + xScale(new Date(d[0]))}
             y={height - barScale(d[1])}
             height={barScale(d[1]) - marginTop}

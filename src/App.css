@@ -1,8 +1,16 @@
-rect:hover {
+.bar:hover {
   fill: #ffffff;
 }
 
-.tooltip {
+.bar-tooltip {
+  position: absolute;
+  top: 400px;
+  background-color: rgb(43, 144, 226);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.heat-map-tooltip {
   position: absolute;
   top: 400px;
   background-color: rgb(43, 144, 226);
